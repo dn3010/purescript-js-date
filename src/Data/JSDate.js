@@ -60,7 +60,7 @@ exports.dateMethodEff = function (method, date) {
 
 exports.parse = function (dateString) {
   return function () {
-    return new Date(dateString);
+    return new Date(dateString.replace(/ /g, "T"));
   };
 };
 
